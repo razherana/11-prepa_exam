@@ -5,6 +5,11 @@ use flight\database\PdoWrapper;
 use flight\debug\database\PdoQueryCapture;
 use Tracy\Debugger;
 
+function render($file, $datas, $template = 'template')
+{
+  Flight::render($template, compact("file", "datas"));
+}
+
 /** 
  * @var array $config This comes from the returned array at the bottom of the config.php file
  * @var Engine $app

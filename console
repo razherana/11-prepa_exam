@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use app\commands\CreateModelCommand;
+
+$application = new Application('Custom CLI', '1.0.0');
+
+// Register commands here
+$application->add(new CreateModelCommand());
+
+// Run the application
+$application->run();
